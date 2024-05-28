@@ -1,0 +1,112 @@
+package sec01.exam01;
+
+public class 연산자Exam {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+//		a = 11;
+//		a = 10 + 1;
+		int b = a + 1;
+		
+		a++;
+		++a;
+		// = a += 1;
+		// = a = a + 1;
+		
+		a =10;
+		a++;	//a = a + 1 = 11
+		System.out.println("a : "+ a);
+		
+		a -= 2;
+		// = a = a - 2;
+		
+		a--;
+		--a;
+		// = a -= 1;
+		
+		a =10;
+		a--;	//a = a - 1 = 9
+		System.out.println("a : "+ a);	//a = 9
+		System.out.println("a : "+ ++a);	//a = 10
+		System.out.println("a : "+ a++);	//a = 10, 실행 후 a = 11
+		System.out.println("a : "+ a);	//a = 11
+		// ++a : 실행 전 +1
+		// a++ : 실행 후 +1
+		
+		// a = 11
+		System.out.println(a++ + ++a);
+		// 11 + 13
+		// a++ = 11
+		// 이후 +연산자를 넘어가면 a = 12
+		// ++a = 13
+		
+		a = 11;
+		int result = a;	// a
+		a = a + 1;		// ++
+		a = a + 1;		// ++
+		result = result + a;
+		System.out.println("result : "+ result);
+		
+		
+		boolean c = true;
+		System.out.println("c : "+ c);	// true
+		c = !c;
+		System.out.println("!c : "+ c);	// false
+		
+		
+		double d = 7.0;		// int에는 7.0 못 들어감
+		System.out.println(d / 3);
+//		System.out.println(3 / 0);
+		// 나누기 0
+		// -> double일 때는 Infinity
+		// -> int일 때는 오류(bay zero)
+		
+		
+		int f = 10;
+		int p = 5;
+		System.out.println("몫 : "+ (f / p));
+		System.out.println("나머지 : "+ (f % p));
+		// + 때문에 연산이 제대로 안 될 수 있음
+		// 연산할 부분만 () 사용
+		
+		
+		int money = 10000;
+		int coffee = 4500;
+		System.out.println(money / coffee + "잔");
+		System.out.println("잔돈 : "+ money % coffee);
+		
+		
+		int hong = 5000;
+		int lip = 10000;
+		double sale = 0.85;
+		System.out.println("꿀홍차 15% 세일 : "+ hong * sale);
+		System.out.println("꿀홍차 + 립스틱 15% 세일 : "+ (hong + lip) * sale);
+		
+		
+		int have = 7234;
+		int ooo1 = 5000;
+		int ooo2 = 1000;
+		int ooo3 = 500;
+		int ooo4 = 100;
+		int ooo5 = 50;
+		int ooo6 = 10;
+		int ooo7 = 1;
+		
+		int o1 = have / ooo1; // 1
+		int oo2 = ooo1 * o1;	// 1 * 5000
+		int o2 = (have - oo2) / 1000; // 2
+		int oo3 = oo2 + o2 * ooo2;
+		int o3 = (have - oo3) / ooo3;
+
+		System.out.println("5000원 : "+ o1 +"장");
+		System.out.println("1000원 : "+ o2 +"장");
+		System.out.println("500원 : "+ o3 +"개");
+		System.out.println("100원 : "+ o2 +"개");
+		System.out.println("50원 : "+ o2 +"개");
+		System.out.println("10원 : "+ o2 +"개");
+		System.out.println("1원 : "+ o2 +"개");
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package sec01.exam01;
+
+public class TypeCastingExam {
+
+	public static void main(String[] args) {
+		
+		int a = 10;
+		long b = (long)a;	
+		//int type인 a를 long type으로 바꾼 후 long type인 b에 넣음
+		//	->형변환(type casting)
+		
+		long c = a;
+		//작은 타입 -> 큰 타입 => 손실 X
+		//형 변환 생략 가능 => 자동 형변환(묵시적, 암시적 형변환)
+		
+		System.out.println(c);
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package sec01.exam01;
+
+import java.util.Scanner;
+
+public class ForExam {
+	public static void main(String[] args) {
+		// 1~10까지 짝수만 출력
+		// - 증감식 이용
+		// - if문 이용
+		
+		
+		for(int i = 1; i <= 10; i++) {
+			if(i % 2 == 0) {
+				System.out.println("i : "+ i);
+			}
+		}
+		
+		
+		
+		// 1~10까지 한 줄에 3개씩 출력
+	}
+}

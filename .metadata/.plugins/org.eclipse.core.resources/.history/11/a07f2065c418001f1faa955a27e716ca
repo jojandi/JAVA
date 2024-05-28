@@ -1,0 +1,20 @@
+package sec01.exam01;
+
+public class VarExam {
+
+	public static void main(String[] args) {
+		// 변수 선언 : 자료의 종류(type) 이름
+		int score; // 선언부
+		score = 90; // 할당(값 저장)
+
+//		int value;
+//		value = 30;
+		int value = 30; // 선언과 동시에 초기화
+		value = 31;
+		
+//		score + value
+//		= 90  + 31
+		
+	}
+
+}
