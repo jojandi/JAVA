@@ -117,27 +117,86 @@ public class ForExam {
 		System.out.println("-----------------------");
 
 		
+		
 		// 1~10까지 짝수만 출력
+		
 		// - 증감식 이용
-		// - if문 이용
-				
-				
+		for(i = 0; i <= 10; i += 2) {
+		System.out.println("i : "+ i);
+		}
+		System.out.println("-----------------------");
+						
+		// - if문 이용	
 		for(i = 1; i <= 10; i++) {
 			if(i % 2 == 0) {
 				System.out.println("i : "+ i);
 			}
 		}
 		System.out.println("-----------------------");
-		
-				
+						
+						
+								
 		// 1~10까지 한 줄에 3개씩 출력
+		// 내 방식
 		for(int j = 1; j <= 10; j++) {
-			if(j % 3 == 0) {
+			if(j % 3 == 0) /* 3의 배수에서 줄내림 */{
 				System.out.println(j);
-			} else {
-					System.out.print(j);
+			} else 	/* 3의 배수가 아닌 나머지들은 줄내림 X */{
+				System.out.print(j+"\t");
 			}
 		}
+		System.out.println();
+		System.out.println("-----------------------");
+						
+		// 선생님 방식
+		for(int j = 1; j <= 10; j++) {
+			System.out.print(j);	// 붙여서 출력
+			if(j % 3 == 0) {	//3의 배수에서 줄내림
+				System.out.println();
+			}
+		}
+		System.out.println();
+						
+		int jj;
+		for(jj = 0; jj <= 10; jj++) {
+							
+		}
+		System.out.println(jj);	
+		// 11 출력(마지막에 +1하고 조건이 맞지 않아서 탈출)
+		System.out.println("-----------------------");
+						
+						
+						
+		// 1~100까지 3의 배수가 몇 개 있는가?
+						
+		int coun = 0;
+		// for문 안에서 선언하면 coun가 0으로 자꾸 초기화 됨
+		// coun 값이 1로 고정
+		// => for문 밖에서 선언 -> coun 값이 누적 됨
+		for(int a = 1; a <= 100; a++) {
+			if(a % 3 == 0) {
+				coun++;
+//				System.out.println(coun + ". " +a);
+			}
+		}
+		System.out.println("1~100까지 수 중의서 3의 배수의 수는 "+ coun+ "개다.");
+						
+				
+				
+		//구구단 - 2단
+		for(int m=1; m <= 9; m++) {
+			System.out.println("2 * " +m+ " = "+ (2 * m));
+		}
+		System.out.println("-----------------------");
+				
+		//구구단 - 전체
+		for(int dan = 2; dan <= 9; dan++) {
+			System.out.println("----------"+dan+"단----------");
+			for(int m=1; m <= 9; m++) {
+				System.out.println(dan+" * " +m+ " = "+ (dan * m));
+			}
+		}
+		System.out.println("-----------------------");
 	}
 
 }

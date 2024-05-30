@@ -145,6 +145,7 @@ public class 연산자Exam {
 		String one = left;
 		left = right;
 		right = one;
+		// swap
 		
 		System.out.println(left);
 		System.out.println(right);
