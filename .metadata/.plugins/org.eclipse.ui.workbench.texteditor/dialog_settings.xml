@@ -6,12 +6,20 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="바위"/>
+		<item key="selection" value="array1"/>
 		<list key="findhistory">
+			<item value="array"/>
+			<item value="array3"/>
+			<item value="array2"/>
+			<item value="array1"/>
 			<item value="주먹"/>
 			<item value="바위"/>
 		</list>
 		<list key="replacehistory">
+			<item value="array1"/>
+			<item value="a3"/>
+			<item value="a2"/>
+			<item value="a1"/>
 			<item value="바위"/>
 			<item value="주먹"/>
 		</list>
