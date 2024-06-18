@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="array1"/>
+		<item key="selection" value="결제"/>
 		<list key="findhistory">
+			<item value="결재"/>
+			<item value="cart"/>
 			<item value="array"/>
 			<item value="array3"/>
 			<item value="array2"/>
@@ -16,6 +18,8 @@
 			<item value="바위"/>
 		</list>
 		<list key="replacehistory">
+			<item value="결제"/>
+			<item value="list"/>
 			<item value="array1"/>
 			<item value="a3"/>
 			<item value="a2"/>
