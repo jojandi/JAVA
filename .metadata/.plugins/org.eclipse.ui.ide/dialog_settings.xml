@@ -103,5 +103,30 @@
 		<item value="org.springsource.sts:3.9.18.202109140905-RELEASE"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\workspace\workspace_java\test"/>
+			<item value="C:\workspace\workspace_java\java_exam"/>
+			<item value="C:\workspace\workspace_java\chap05"/>
+			<item value="C:\workspace\workspace_java\chap04"/>
+			<item value="C:\workspace\workspace_java\chap02"/>
+			<item value="C:\workspace\workspace_java\chap01"/>
+			<item value="C:\workspace\workspace_java\baekjoon"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="327"/>
+		<item key="DIALOG_Y_ORIGIN" value="313"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>
