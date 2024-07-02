@@ -1,5 +1,6 @@
 package exam;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class JavaTestPractice {
@@ -12,6 +13,7 @@ public class JavaTestPractice {
       // 3. 옵션에 따라 출력
       
       Scanner scan = new Scanner(System.in);
+      ArrayList list = new ArrayList();
       
       String cart = "";
       int price = 0;
@@ -224,7 +226,6 @@ public class JavaTestPractice {
 				list.add("<- 연하게");
 			} else if(i == 0) {
 				System.out.println("옵션을 재선택합니다. ");
-				continue;
 			} 
 		} // 샷 옵션 끝
    }
