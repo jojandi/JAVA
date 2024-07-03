@@ -1,5 +1,10 @@
 package sec02.exam01;
 
+// 그냥 class는 파일명이랑 달라도 됨
+class Tire {
+	
+}
+// public 이 붙은 class는 파일명과 클래스명이 같아야함
 public class Car {
 	
 	/* 
