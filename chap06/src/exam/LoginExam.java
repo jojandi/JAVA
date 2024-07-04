@@ -1,12 +1,12 @@
 package exam;
 
-public class BankExam {
+public class LoginExam {
 
 	public static void main(String[] args) {
 
-		Bank bank = new Bank();
+		Login login = new Login();
 		
-		bank.bank();
+		login.login();
 		
 	}
 

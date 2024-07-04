@@ -1,13 +1,13 @@
 package exam;
 
-public class BankExam {
+public class TvExam {
 
 	public static void main(String[] args) {
 
-		Bank bank = new Bank();
+		Tv tv = new Tv();
 		
-		bank.bank();
-		
+		tv.on();
+		tv.tv();
 	}
 
 }

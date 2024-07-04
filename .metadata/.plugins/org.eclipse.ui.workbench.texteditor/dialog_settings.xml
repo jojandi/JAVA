@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="메소드"/>
+		<item key="selection" value="defend"/>
 		<list key="findhistory">
+			<item value="defend1"/>
+			<item value="defend2"/>
+			<item value="c1.heal1"/>
+			<item value="heal2"/>
+			<item value="heal1"/>
+			<item value="attack2"/>
+			<item value="attack1"/>
 			<item value="함수"/>
 			<item value="매소드"/>
 			<item value="결재"/>
@@ -16,10 +23,14 @@
 			<item value="array3"/>
 			<item value="array2"/>
 			<item value="array1"/>
-			<item value="주먹"/>
-			<item value="바위"/>
 		</list>
 		<list key="replacehistory">
+			<item value="defend"/>
+			<item value="c1.heal"/>
+			<item value="c2.heal"/>
+			<item value="c1.heal1"/>
+			<item value="c2.attack()"/>
+			<item value="c1.attack()"/>
 			<item value="메소드"/>
 			<item value="결제"/>
 			<item value="list"/>

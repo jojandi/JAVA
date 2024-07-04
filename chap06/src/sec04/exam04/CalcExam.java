@@ -7,6 +7,9 @@ public class CalcExam {
 		Calc calc = new Calc();
 		
 		calc.execute();
+		System.out.println("------------------------------------");
+		
+		calc.plus(1, 2);
 		
 	}
 
