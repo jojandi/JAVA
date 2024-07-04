@@ -8,7 +8,6 @@ public class BattleExam {
 //		a.charactor();
 		
 		Battle b = new Battle();
-//		b.info();
 		b.game();
 		
 	}

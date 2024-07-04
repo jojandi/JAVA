@@ -9,7 +9,8 @@ public class CarExam {
 		
 		Car car2 = new Car();
 		car2.print();
-		
+		System.out.println("-----------");
+		new Car();
 	}
 
 }

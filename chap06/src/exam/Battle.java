@@ -90,7 +90,6 @@ public class Battle {
 	
 	void infomation() {
 		System.out.println("=========================================");
-
 		System.out.println("~ " + c1.name() + "의 정보 ~ ");
 		System.out.println("HP : " + hart1);
 		System.out.println("공격력 : " + c1.attack());
@@ -124,7 +123,6 @@ public class Battle {
 	}
 	
 	void attack2_1() {
-		
 		defend = (int)(Math.random() * 5) + 1;
 		System.out.println(c2.name() + " 공격! (공격력 : " + c2.attack() + ")");
 		System.out.println(c1.name() + " 방어! (방어력 : " + defend + ")");
