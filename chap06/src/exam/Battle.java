@@ -35,26 +35,31 @@ public class Battle {
 	
 	void game() {
 		System.out.println("게임을 시작합니다. ");
+		c1.charactor();
+		c2.charactor();
+		infomation();
 		while(is) {
-			c1.charactor();
-			c2.charactor();
-			
-			infomation();
 			System.out.println(c1.name() + "의 행동선택");
 			System.out.println("1. 공격 | 2. 물약 섭취 | 3. 도망가기");
 			int you = scan.nextInt();
 			if(you == 1) {
 				attack1_2();
 				if(hart2 <= 0) {
-					System.out.println(c2.name() + "LOSE...");
+					hart2 = 0;
+					info();
+					System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+					System.out.println(c2.name() + " LOSE...");
 					System.out.println(c1.name() + " WIN!!");
-					is = false;
+					break;
 				}
 			} else if(you == 2) {
 				heal1();
 			} else if(you == 3) {
 				System.out.println(c1.name() + "가 도망갔다!");
-				System.out.println(c2.name() + " WIN");
+				System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+				System.out.println(c1.name() + " LOSE...");
+				System.out.println(c2.name() + " WIN!!");
+				break;
 			}
 			info();
 			System.out.println(c2.name() + "의 행동선택");
@@ -63,43 +68,52 @@ public class Battle {
 			if(you == 1) {
 				attack2_1();
 				if(hart1 <= 0) {
-					System.out.println(c1.name() + "LOSE...");
+					hart1 = 0;
+					info();
+					System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+					System.out.println(c1.name() + " LOSE...");
 					System.out.println(c2.name() + " WIN!!");
-					is = false;
+					break;
 				}
 			} else if(you == 2) {
 				heal2();
 			} else if(you == 3) {
 				System.out.println(c2.name() + "가 도망갔다!");
+				System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+				System.out.println(c2.name() + " LOSE...");
 				System.out.println(c1.name() + " WIN!!");
+				break;
 			}
+			info();
 		}
 	}
 	
 	void infomation() {
-		System.out.println("==========================");
+		System.out.println("=========================================");
+
 		System.out.println("~ " + c1.name() + "의 정보 ~ ");
 		System.out.println("HP : " + hart1);
 		System.out.println("공격력 : " + c1.attack());
 		System.out.println("물약 효능 : " + c1.heal());
-		System.out.println("--------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("~ " + c2.name() + "의 정보 ~ ");
 		System.out.println("HP : " + hart2);
 		System.out.println("공격력 : " + c2.attack());
 		System.out.println("물약 효능 : " + c2.heal());
-		System.out.println("==========================");
+		System.out.println("=========================================");
+
 	}
 	
 	void info() {
-		System.out.println("--------------------------");
-		System.out.println(c1.name() + "HP : " + hart1);
-		System.out.println(c2.name() + "HP : " + hart2);
-		System.out.println("--------------------------");
-	}
+		System.out.println("-----------------------------------------");
+		System.out.println(c1.name() + " - HP : " + hart1);
+		System.out.println(c2.name() + " - HP : " + hart2);
+		System.out.println("-----------------------------------------");
+		}
 	
 	void attack1_2() {
 		defend = (int)(Math.random() * 5) + 1;
-		System.out.println(c1.name() + " 공격! (공격력 : " + c2.attack() + ")");
+		System.out.println(c1.name() + " 공격! (공격력 : " + c1.attack() + ")");
 		System.out.println(c2.name() + " 방어! (방어력 : " + defend + ")");
 		int a = c1.attack() - defend;
 		if(a < 0) {

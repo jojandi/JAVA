@@ -26,6 +26,10 @@ public class BattleChar1 {
 //			System.out.println("잘못된 입력입니다. ");
 //		}
 		attack = (int)(Math.random() * 25) + 1;
+		while(attack < 10) {
+			attack = (int)(Math.random() * 25) + 1;
+//			System.out.println(attack);
+		}
 		
 //		System.out.println("회복능력을 설정하세요. (1~15) | 0. 랜덤");
 //		you = scan.nextInt();
