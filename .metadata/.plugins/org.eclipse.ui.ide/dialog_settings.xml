@@ -109,6 +109,12 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\worksapce\JAVA-main\java_exam"/>
+			<item value="C:\worksapce\JAVA-main\chap06"/>
+			<item value="C:\worksapce\JAVA-main\chap05"/>
+			<item value="C:\worksapce\JAVA-main\chap04"/>
+			<item value="C:\worksapce\JAVA-main\chap02"/>
+			<item value="C:\worksapce\JAVA-main\chap01"/>
 			<item value="C:\workspace\workspace_java\test"/>
 			<item value="C:\workspace\workspace_java\java_exam"/>
 			<item value="C:\workspace\workspace_java\chap05"/>
@@ -128,5 +134,7 @@
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
