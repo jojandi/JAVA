@@ -17,7 +17,7 @@ public class BattleChar1 {
 		name = scan.next();
 
 		attack = (int)(Math.random() * 25) + 1;
-		while(attack < 10) {
+		while(attack < 15) {
 			attack = (int)(Math.random() * 25) + 1;
 //			System.out.println(attack);
 		}

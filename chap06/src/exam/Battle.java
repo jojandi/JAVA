@@ -39,7 +39,7 @@ public class Battle {
 		c2.charactor();
 		infomation();
 		while(is) {
-			System.out.println(c1.name() + "의 행동선택");
+			System.out.println(c1.name() + "(이)의 행동선택");
 			System.out.println("1. 공격 | 2. 물약 섭취 | 3. 도망가기");
 			int you = scan.nextInt();
 			if(you == 1) {
@@ -55,14 +55,14 @@ public class Battle {
 			} else if(you == 2) {
 				heal1();
 			} else if(you == 3) {
-				System.out.println(c1.name() + "가 도망갔다!");
+				System.out.println(c1.name() + "(이)가 도망갔다!");
 				System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 				System.out.println(c1.name() + " LOSE...");
 				System.out.println(c2.name() + " WIN!!");
 				break;
 			}
 			info();
-			System.out.println(c2.name() + "의 행동선택");
+			System.out.println(c2.name() + "(이)의 행동선택");
 			System.out.println("1. 공격 | 2. 물약 섭취 | 3. 도망가기");
 			you = scan.nextInt();
 			if(you == 1) {
@@ -78,7 +78,7 @@ public class Battle {
 			} else if(you == 2) {
 				heal2();
 			} else if(you == 3) {
-				System.out.println(c2.name() + "가 도망갔다!");
+				System.out.println(c2.name() + "(이)가 도망갔다!");
 				System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 				System.out.println(c2.name() + " LOSE...");
 				System.out.println(c1.name() + " WIN!!");
@@ -90,12 +90,12 @@ public class Battle {
 	
 	void infomation() {
 		System.out.println("=========================================");
-		System.out.println("~ " + c1.name() + "의 정보 ~ ");
+		System.out.println("~ " + c1.name() + "(이)의 정보 ~ ");
 		System.out.println("HP : " + hart1);
 		System.out.println("공격력 : " + c1.attack());
 		System.out.println("물약 효능 : " + c1.heal());
 		System.out.println("-----------------------------------------");
-		System.out.println("~ " + c2.name() + "의 정보 ~ ");
+		System.out.println("~ " + c2.name() + "(이)의 정보 ~ ");
 		System.out.println("HP : " + hart2);
 		System.out.println("공격력 : " + c2.attack());
 		System.out.println("물약 효능 : " + c2.heal());
@@ -104,7 +104,7 @@ public class Battle {
 	}
 	
 	void info() {
-		System.out.println("-----------------------------------------");
+		System.out.println("=========================================");
 		System.out.println(c1.name() + " - HP : " + hart1);
 		System.out.println(c2.name() + " - HP : " + hart2);
 		System.out.println("-----------------------------------------");
