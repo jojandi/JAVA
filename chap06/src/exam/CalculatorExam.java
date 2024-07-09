@@ -17,7 +17,9 @@ public class CalculatorExam {
 		calc.calc(5, "*", 2);
 		calc.calc(5, "/", 2);
 		calc.calc(5, "%", 2);
-		calc.calc(5, "=", 2);
+		calc.calc(5, null, 2);
+		System.out.println("-------------");
+		calc.calc(5, "a", 2);
 		
 	}
 

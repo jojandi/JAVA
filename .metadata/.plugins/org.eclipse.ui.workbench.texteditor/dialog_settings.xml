@@ -6,8 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="defend"/>
+		<item key="selection" value="c2.hart"/>
 		<list key="findhistory">
+			<item value="hart2"/>
+			<item value="hart1"/>
+			<item value="infomation"/>
+			<item value="charactor"/>
+			<item value="sv22"/>
 			<item value="defend1"/>
 			<item value="defend2"/>
 			<item value="c1.heal1"/>
@@ -18,13 +23,13 @@
 			<item value="함수"/>
 			<item value="매소드"/>
 			<item value="결재"/>
-			<item value="cart"/>
-			<item value="array"/>
-			<item value="array3"/>
-			<item value="array2"/>
-			<item value="array1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="c2.hart"/>
+			<item value="c1.hart"/>
+			<item value="information"/>
+			<item value="character"/>
+			<item value="sv23"/>
 			<item value="defend"/>
 			<item value="c1.heal"/>
 			<item value="c2.heal"/>
@@ -35,11 +40,6 @@
 			<item value="결제"/>
 			<item value="list"/>
 			<item value="array1"/>
-			<item value="a3"/>
-			<item value="a2"/>
-			<item value="a1"/>
-			<item value="바위"/>
-			<item value="주먹"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

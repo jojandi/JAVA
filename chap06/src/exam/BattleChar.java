@@ -2,27 +2,23 @@ package exam;
 
 import java.util.Scanner;
 
-public class BattleChar1 {
+public class BattleChar {
 	
 	Scanner scan = new Scanner(System.in);
 	
-	int attack;
-	int heal;
-	String name;
+	int attack; // 공격력
+	int heal; // 회복 능력
+	String name; // 캐릭터이름
+	int hart = 100;
 	
-	void charactor () {
-		System.out.println("=========================================");
+	void character() {
 		System.out.println("캐릭터를 생성합니다. ");
 		System.out.println("이름을 설정하세요. ");
 		name = scan.next();
 
-		attack = (int)(Math.random() * 25) + 1;
-		while(attack < 15) {
-			attack = (int)(Math.random() * 25) + 1;
-//			System.out.println(attack);
-		}
+		attack = 10 + (int)(Math.random() * 15); // 10 ~ 25
 		
-		heal = (int)(Math.random() * 10) + 1;
+		heal = 5 + (int)(Math.random() * 10); // 5 ~ 15
 		
 //		System.out.println(name + " => 공격력 : " + attack + ", 회복능력 : " + heal);
 		System.out.println("=========================================");
@@ -39,5 +35,6 @@ public class BattleChar1 {
 	String name() {
 		return name;
 	}
+
 	
 }
