@@ -11,6 +11,7 @@ public class Child extends Parent {
 	// overshadow
 	//  : 부모 필드명 == 자식 필드명 
 	//  : 부모의 필드를 가리는 현상
+	// 부모의 name을 사용하고 싶다면 super.name 사용
 	String name = "Child의 name";
 	
 	// 상속 받았을 때 기본 생성자
@@ -18,10 +19,12 @@ public class Child extends Parent {
 		// 부모으 생성자 호출
 		// 내 생성자를 가져오는 this와 비슷
 		// 맨 첫 줄에 있어야만 함
-		super("부모에 전달인자가 있기 때문에 super을 사용하여 부모생성자에 전달인자를 써 줌");
+		super("Child 생성자 : 부모에 전달인자가 있기 때문에 \n super을 사용하여 부모생성자에 전달인자를 써 줌");
 	}
 	
+	// 기본생성자
 //	Child(){
+//		super(); -> super()은 무조건 생성됨! 무조건 필요!!
 //		System.out.println("Child 기본 생성자");
 //	}
 	
