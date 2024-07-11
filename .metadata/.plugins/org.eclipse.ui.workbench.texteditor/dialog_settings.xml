@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="c2.hart"/>
+		<item key="selection" value="setSpeed"/>
 		<list key="findhistory">
+			<item value="getSpeed"/>
+			<item value="getGas"/>
 			<item value="hart2"/>
 			<item value="hart1"/>
 			<item value="infomation"/>
@@ -21,10 +23,10 @@
 			<item value="attack2"/>
 			<item value="attack1"/>
 			<item value="함수"/>
-			<item value="매소드"/>
-			<item value="결재"/>
 		</list>
 		<list key="replacehistory">
+			<item value="setSpeed"/>
+			<item value="setGas"/>
 			<item value="c2.hart"/>
 			<item value="c1.hart"/>
 			<item value="information"/>
@@ -38,8 +40,6 @@
 			<item value="c1.attack()"/>
 			<item value="메소드"/>
 			<item value="결제"/>
-			<item value="list"/>
-			<item value="array1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

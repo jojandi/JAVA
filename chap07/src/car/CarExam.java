@@ -6,12 +6,13 @@ public class CarExam {
 
 		벤츠 ben = new 벤츠();
 		
-		ben.on();
 		ben.off();
-		ben.off();
-		ben.on();
 		
-		ben.drive(50);
+		ben.in(200);
+
+		ben.on();
+		ben.drive(100, 50);
+		
 		
 	}
 
