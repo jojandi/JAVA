@@ -18,19 +18,27 @@ public class Calculator {
 		System.out.println("결과 : " + result);
 	}
 	
+
 	void calc(int x,String a, int y) {
-		if(a == "+") {
-			plus(x, y);
-		} else if(a == "-") {
-			minus(x, y);
-		} else if(a == "*") {
-			multiply(x, y);
-		} else if(a == "/") {
-			divide(x, y);
-		} else if(a == "%") {
-			remainder(x, y);
+		// null 입력까지 생각하기!
+		if(a != null) {
+			
+			if(a.equals("+")) {
+				plus(x, y);
+			} else if(a.equals("-")) {
+				minus(x, y);
+			} else if(a.equals("*")) {
+				multiply(x, y);
+			} else if(a.equals("/")) {
+				divide(x, y);
+			} else if(a.equals("%")) {
+				remainder(x, y);
+			} else {
+				System.out.println("계산할 수 없습니다. ");
+			}
+			
 		} else {
-			System.out.println("계산할 수 없습니다. ");
+			System.out.println("null 값은 계산할 수 없습니다. ");
 		}
 	}
 	

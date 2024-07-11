@@ -4,6 +4,7 @@ public class AcademyExam {
 
 	public static void main(String[] args) {
 
+		System.out.println("========================= 리스트 ============================");
 		// 리스트
 		Academy a1 = new Academy("천안");
 		
@@ -13,6 +14,7 @@ public class AcademyExam {
 		Student s4 = new Student("고영희", 27);
 		Student s5 = new Student("이슬기", 30);
 		
+//		a1.join(new Student("김영희", 20)); 이렇게도 사용 가능
 		a1.join(s1);
 		a1.join(s2);
 		a1.join(s3);
@@ -21,7 +23,7 @@ public class AcademyExam {
 		
 		a1.viewList();
 		
-		System.out.println("=============================================================");
+		System.out.println("=========================== 배열 ============================");
 		// 배열
 		AcademyArray aa1 = new AcademyArray("수원");
 		
@@ -38,6 +40,11 @@ public class AcademyExam {
 		aa1.join(as5);
 		
 		aa1.viewList();
+		
+		System.out.println("=========================== 학생 ============================");
+		Student s = aa1.student(3);
+		s.study("JAVA Class");
+		s.eat("마라탕");
 	}
 
 }

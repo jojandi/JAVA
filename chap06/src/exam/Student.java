@@ -41,7 +41,7 @@ public class Student {
 	*/
 	int study(String subject) {
 		System.out.println("-----------------------------------------------------------------------------------------");
-		System.out.println("\n" + subject + "을(를) 공부했다!\n");
+		System.out.println("\n " + name + " 이(가) " + subject + "을(를) 공부했다!\n");
 		System.out.println("-----------------------------------------------------------------------------------------");
 		
 		intel += 8;
@@ -61,7 +61,7 @@ public class Student {
 	*/
 	int study(String game, int st) {
 		System.out.println("-----------------------------------------------------------------------------------------");
-		System.out.println("\n" + game + "을(를) 했더니 스트레스가 " + st + "만큼 증가했다!\n");
+		System.out.println("\n" + name + " 이(가) " + game + "을(를) 했더니 스트레스가 " + st + "만큼 증가했다!\n");
 		System.out.println("-----------------------------------------------------------------------------------------");
 		
 		intel += 5;
@@ -81,7 +81,8 @@ public class Student {
 	*/
 	int eat(String menu) {
 		System.out.println("-----------------------------------------------------------------------------------------");
-		System.out.println("\n" + menu + "을(를) 먹었다! \n");
+		System.out.println("\n" + name + " 이(가) " + menu + "을(를) 먹었다!");
+		System.out.println(menu + "은(는) 너무 맛있어! \n");
 		System.out.println("-----------------------------------------------------------------------------------------");
 		
 		hp += 3;
@@ -145,7 +146,7 @@ public class Student {
 			// 나를 너무 좋아하는 거 아니니 ? 하 나의 인기란 !
 			// 정은언니가 씀.	
 			
-			System.out.println(hour + "시간 동안 몰입했다...");
+			System.out.println(name + " 은(는) " +hour + "시간 동안 몰입했다...");
 			if(hour <= 2) {
 				System.out.println("오늘은 잘 안 되네... 그만하자... \n");
 				stress += 5;

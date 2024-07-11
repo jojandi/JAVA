@@ -26,7 +26,10 @@ public class Login {
 	}
 	
 	boolean login() {
+		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+		System.out.println("~ 로그인 페이지 ~");
 		while(true) {			
+			System.out.println("-----------------------------------------------");
 			System.out.println("아이디를 입력하세요. ");
 			String i = scan.next();
 			System.out.println("비밀번호를 입력하세요. ");
@@ -36,11 +39,12 @@ public class Login {
 //			System.out.println(p);
 			
 			if(i.equals(id) && p.equals(pw)) {
-				System.out.println("메인페이지");
+				System.out.println("~ 메인페이지 ~");
+				System.out.println(id + "님 환영합니다!");
 				is = true;
 				break;
 			} else {
-				System.out.println("로그인 화면으로 돌아감");
+				System.out.println("로그인 화면으로...");
 				is = false;
 			}
 		}
