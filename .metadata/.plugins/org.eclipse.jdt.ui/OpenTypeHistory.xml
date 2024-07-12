@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=chap07/src&lt;food{Food.java[Food" modifiers="1" timestamp="1720595640001"/>
+    <typeInfo handle="=chap07/src&lt;sec02.exam01{P1.java[P1" modifiers="1" timestamp="1720747758803"/>
+    <typeInfo handle="=chap07/src&lt;sec02.exam01{Animal.java[Animal" modifiers="1" timestamp="1720751358141"/>
     <typeInfo handle="=chap07/src&lt;car{Car.java[Car" modifiers="1" timestamp="1720664853691"/>
-    <typeInfo handle="=chap07/src&lt;cafe{Cafe.java[Cafe" modifiers="1" timestamp="1720674172145"/>
+    <typeInfo handle="=chap07/src&lt;cafe{Cafe.java[Cafe" modifiers="1" timestamp="1720680572093"/>
+    <typeInfo handle="=chap07/src&lt;cafeDT{Cafe.java[Cafe" modifiers="1" timestamp="1720763276522"/>
 </typeInfoHistroy>
