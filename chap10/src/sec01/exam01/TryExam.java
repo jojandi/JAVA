@@ -44,7 +44,7 @@ public class TryExam {
 			if("EC05".equals(message)) {
 				System.out.println("5 미만을 입력하셨습니다. 확인해주세요.");
 			} else if("EC10".equals(message)) {
-				System.out.println(" 10 초과를 입력하셨습니다. 확인해주세요.");
+				System.out.println("10 초과를 입력하셨습니다. 확인해주세요.");
 			}
 			
 			
