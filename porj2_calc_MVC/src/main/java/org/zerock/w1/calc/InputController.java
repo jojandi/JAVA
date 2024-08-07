@@ -18,6 +18,9 @@ public class InputController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doGet 실행");
 		
+		String text = request.getParameter("text");
+		System.out.println("text : " + text);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/calc/input.jsp");
 		
 		dispatcher.forward(request, response);

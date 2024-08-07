@@ -54,6 +54,8 @@
 	<button type="submit">SEND-get</button>
 </form>
 
+전달 받은 값 : ${param.text}
+
 
 </body>
 </html>
