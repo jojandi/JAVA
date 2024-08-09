@@ -63,6 +63,11 @@
 	\${ empty null } : ${ empty null } <br>
 	\${ empty "" } : ${ empty "" } <br>
 	
-	
+	<hr>
+	<strong>~ 파라미터에 있는 값 가져오기 ~</strong><br>
+	\${param.a} : ${param.a}<br>
+	\${paramValues.a[0]} : ${paramValues.a[0]}<br>
+	\${paramValues.a[1]} : ${paramValues.a[1]}<br>
+	\${paramValues.a[100]} : ${paramValues.a[100]}<br>
 </body>
 </html>
