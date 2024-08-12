@@ -29,5 +29,17 @@ public class Todoservice {
 		
 		return list;
 	}
+	
+	// 상세 페이지에 들어갈 내용
+	// 조회한 tno에 맞는 페이지 나옴
+	public TodoDTO get(int tno) {
+		TodoDTO dto = new TodoDTO();
+		dto.setTno(tno);
+		dto.setTitle("sample Todo");
+		dto.setDueDate(LocalDate.now());
+		dto.setFinished(true);
+		
+		return dto;
+	}
 
 }

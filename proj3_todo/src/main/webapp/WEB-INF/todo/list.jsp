@@ -27,6 +27,15 @@
 			width: 100px;
 			text-align: center;
 		}
+		a:link{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: inherit;
+            text-decoration: none;
+        }
 		
 	</style>
 </head>
@@ -46,6 +55,7 @@
 			<c:forEach var="i" begin="0" end="9" varStatus="loop">
 				<tr>
 					<td>
+					<!-- finished가 true라면 checked -->
 						<c:if test="${list[i].finished == false}">
 							<input type="checkbox">
 						</c:if>
@@ -53,9 +63,15 @@
 							<input type="checkbox" checked="checked">
 						</c:if>
 					</td>
+					
+					<!-- 제목 클릭 시 상세 페이지 조회(todo/read로 이동) -->
 					<td id="title">
-						${list[i].title}
+						<c:url var="url" value="/todo/read">
+							<c:param name="tno" value="${list[i].tno}"></c:param>
+						</c:url>
+						<a href=${url}>${list[i].title}</a>
 					</td>
+					
 					<td id="due">
 						${list[i].dueDate}
 					</td>
