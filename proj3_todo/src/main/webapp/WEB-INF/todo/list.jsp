@@ -52,14 +52,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="i" begin="0" end="9" varStatus="loop">
+			<c:forEach var="list" items="${list}" varStatus="loop">
 				<tr>
 					<td>
 					<!-- finished가 true라면 checked -->
-						<c:if test="${list[i].finished == false}">
+						<c:if test="${list.finished == false}">
 							<input type="checkbox">
 						</c:if>
-						<c:if test="${list[i].finished == true}">
+						<c:if test="${list.finished == true}">
 							<input type="checkbox" checked="checked">
 						</c:if>
 					</td>
@@ -67,13 +67,13 @@
 					<!-- 제목 클릭 시 상세 페이지 조회(todo/read로 이동) -->
 					<td id="title">
 						<c:url var="url" value="/todo/read">
-							<c:param name="tno" value="${list[i].tno}"></c:param>
+							<c:param name="tno" value="${list.tno}"></c:param>
 						</c:url>
-						<a href=${url}>${list[i].title}</a>
+						<a href=${url}>${list.title}</a>
 					</td>
 					
 					<td id="due">
-						${list[i].dueDate}
+						${list.dueDate}
 					</td>
 				</tr>
 			</c:forEach>
