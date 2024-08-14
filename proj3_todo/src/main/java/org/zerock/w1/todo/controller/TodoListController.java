@@ -20,7 +20,7 @@ public class TodoListController extends HttpServlet {
 		System.out.println("/todo/list doGet start");
 		
 		Todoservice service = new Todoservice();
-		List<TodoDTO> todoList = service.getList(); // list 10개 생성
+		List<TodoDTO> todoList = service.getList(); // list 생성
 		
 		request.setAttribute("list", todoList); // list.jsp에 todoList를 보내기 위해 request에 담음
 		

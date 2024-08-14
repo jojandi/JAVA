@@ -7,27 +7,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Todo 상세조회</title>
 <style>
-	table{
-		border-collapse: collapse;
-		margin-bottom: 10px;
-	}
-
-	thead{
-		text-align: center;
-		padding: 10px;
-	}
-	
-	td{
-		padding: 5px;
-		text-align: center;
-	}
-	
-	#title{
-		width: 200px;
-		text-align: left;
-	}
+	table{ border-collapse: collapse; margin-bottom: 10px; }
+	thead{ text-align: center; padding: 10px; }
+	td{ padding: 5px; text-align: center; }
+	#title{ width: 200px; text-align: left; }
+	a:link{ color: inherit; text-decoration: none; }
+    a:visited{ color: inherit; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -56,8 +43,16 @@
 		</tbody>
 	</table>
 	
-	<form action="http://127.0.0.1:8080/proj3_todo/todo/list">
-		<input type="submit" value="뒤로가기">
+	<form action="/proj3_todo/todo/delete" method="post" >
+		<input type="hidden" name="tno" value="${dto.tno}">
+		
+		<a href="/proj3_todo/todo/list">
+			<input type="button" value="뒤로가기">
+		</a>
+		<a href="/proj3_todo/todo/update?tno=${dto.tno}" >
+			<input type="button" value="수정하기">
+		</a>
+		<input type="submit" value="삭제하기">
 	</form>
 	
 </body>

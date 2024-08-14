@@ -1,12 +1,17 @@
 package org.zerock.w1.todo.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 import org.zerock.w1.todo.dto.TodoDTO;
 
@@ -135,6 +140,115 @@ public class TodoDAO {
 		}
 		
 		return dto;
+	}
+	
+	
+	public int insert(TodoDTO dto) {
+		int result = -1;
+		
+		try {
+			// context.xml에서 name이 jdbc/oracle인 resource를 가져옴
+			// DataSource 타입으로 형변환
+			Context ctx = new InitialContext();
+            DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+            // DB 접속 ( 커넥션 풀 사용 )
+            Connection con = dataFactory.getConnection();
+            
+            // SQL 준비
+            String query = "insert into tbl_todo (tno, title, duedate, finished) "
+            		+ "values (seq_todo.nextval, ?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, dto.getTitle());
+            
+            Date date = Date.valueOf(dto.getDueDate());
+            ps.setDate(2, date);
+            
+            String finished = dto.isFinished() ? "Y" : "N";
+            ps.setString(3, finished);
+            
+            // SQL 실행
+            result = ps.executeUpdate(); // 몇 줄이 업데이트 되었는지 int로 받음
+            
+            ps.close();
+            con.close();
+            
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	public int update(TodoDTO dto) {
+		int result = -1;
+		
+		try {
+			// context.xml에서 name이 jdbc/oracle인 resource를 가져옴
+			// DataSource 타입으로 형변환
+			Context ctx = new InitialContext();
+            DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+            // DB 접속 ( 커넥션 풀 사용 )
+            Connection con = dataFactory.getConnection();
+            
+            // SQL 준비
+            String query = "update tbl_todo ";
+    		query += "set title = ?,";
+			query += "duedate = ?,";
+			query += "finished = ? ";
+			query += "where tno = ?";
+			
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(4, dto.getTno());
+            ps.setString(1, dto.getTitle());
+            
+            Date date = Date.valueOf(dto.getDueDate());
+            ps.setDate(2, date);
+            
+            String finished = dto.isFinished() ? "Y" : "N";
+            ps.setString(3, finished);
+            
+            // SQL 실행
+            result = ps.executeUpdate(); // 몇 줄이 업데이트 되었는지 int로 받음
+            
+            ps.close();
+            con.close();
+            
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	public int delete(TodoDTO dto) {
+		int result = -1;
+		
+		try {
+			// context.xml에서 name이 jdbc/oracle인 resource를 가져옴
+			// DataSource 타입으로 형변환
+			Context ctx = new InitialContext();
+            DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+            // DB 접속 ( 커넥션 풀 사용 )
+            Connection con = dataFactory.getConnection();
+            
+            // SQL 준비
+            String query = "delete tbl_todo ";
+			query += "where tno = ?";
+			
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(1, dto.getTno());
+            
+            // SQL 실행
+            result = ps.executeUpdate(); // 몇 줄이 업데이트 되었는지 int로 받음
+            
+            ps.close();
+            con.close();
+            
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 	
 }

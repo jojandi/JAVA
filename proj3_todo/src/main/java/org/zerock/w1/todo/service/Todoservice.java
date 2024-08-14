@@ -9,10 +9,25 @@ import org.zerock.w1.todo.dto.TodoDTO;
 
 public class Todoservice {
 
-	// DB에서 insert
-	// 임시로 가짜 데이터 등록
-	public void register(TodoDTO todoDTO) {
-		System.out.println("등록중......" + todoDTO); // todoDTO의 toString 동작
+	// DB에 insert
+	public int register(TodoDTO todoDTO) {
+		
+		TodoDAO dao = new TodoDAO();
+		return dao.insert(todoDTO);
+	}
+	
+	// DB에 update
+	public int update(TodoDTO todoDTO) {
+		
+		TodoDAO dao = new TodoDAO();
+		return dao.update(todoDTO);
+	}
+	
+	// DB에 delete
+	public int delete(TodoDTO todoDTO) {
+		
+		TodoDAO dao = new TodoDAO();
+		return dao.delete(todoDTO);
 	}
 	
 	// DB에서 select
