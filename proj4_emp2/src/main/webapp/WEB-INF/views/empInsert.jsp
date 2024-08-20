@@ -12,51 +12,72 @@
 <title>Insert title here</title>
 <style>
 	table{ border-collapse: collapse; text-align: center; width: 100%; margin-top: 10px; }
-	td{ padding: 5px 10px; }
-	div{ width: 650px; margin-top: 15px; }
+	div{ width: 500px; margin-top: 15px; }
+	td{ padding: 6px 5px; }
 	form{ text-align: right; }
 	a:link{ color: inherit; text-decoration: none; }
     a:visited{ color: inherit; text-decoration: none; }
     a:hover{ text-decoration: underline; }
-    td input{ width: 100%; }
+    td input{ width: 95%; }
+    select{ width: 97%; }
 </style>
 </head>
 <body>
 
 <div>
-	<form action="delete" method="post">		
+	<form action="update" method="post">		
 		<a href="get"><input type=button value="목록으로"></a>
-		<a href="update"><input type=button value="수정"></a>
-		<input type=submit value="삭제">
-	</form>
-
-<h3>${emp.ename}</h3>
-	<table border=1>
-		<thead>
+		<input type=submit value="등록">
+		<table border=1>
 			<tr>
 				<td>사원번호</td>
-				<td>직책</td>
-				<td>상사</td>
-				<td>입사일</td>
-				<td>연봉</td>
-				<td>성과금</td>
-				<td>부서번호</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-			<!-- 필드명을 가져오는 것이 아닌 getter명을 가져옴 -->
 				<td><input type="text" name="empno"></td>
-				<td><input type="text" name="ename"></td>
-				<td><input type="text" name="job"></td>
-				<td><input type="text" name="mgr"></td>
-				<td><input type="date" name="hireDate"></td>
-				<td><input type="text" name="sal"></td>
-				<td><input type="text" name="comm"></td>
-				<td><input type="text" name="deptno"></td>
 			</tr>
-		</tbody>
-	</table>	
+			
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="ename"></td>
+			</tr>
+			
+			<tr>
+				<td>직책</td>
+				<td><input type="text" name="job"></td>
+			</tr>
+			
+			<tr>
+				<td>상사</td>
+				<td><input type="text" name="mgr"></td>
+			</tr>
+			
+			<tr>
+				<td>입사일</td>
+				<td><input type="date" name="hireDate"></td>
+			</tr>
+			
+			<tr>
+				<td>연봉</td>
+				<td><input type="text" name="sal"></td>
+			</tr>
+			
+			<tr>
+				<td>성과금</td>
+				<td><input type="text" name="comm"></td>
+			</tr>
+			
+			<tr>
+				<td>부서번호</td>
+				<td>
+					<select name="deptno">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="30">30</option>
+						<option value="40">40</option>
+					</select>
+				</td>
+			</tr>
+		</table>	
+	</form>
+
 </div>
 
 </body>

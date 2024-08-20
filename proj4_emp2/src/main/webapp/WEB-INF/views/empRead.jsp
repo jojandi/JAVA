@@ -24,16 +24,17 @@
 
 <div>
 	<form action="delete" method="post">		
+		<input type="hidden" name="ename" value="${list[0].ename}">
 		<a href="get"><input type=button value="목록으로"></a>
-		<a href="update"><input type=button value="수정"></a>
+		<a href="update?ename=${list[0].ename}"><input type=button value="수정"></a>
 		<input type=submit value="삭제">
 	</form>
 
-<h3>${emp.ename}</h3>
 	<table border=1>
 		<thead>
 			<tr>
 				<td>사원번호</td>
+				<td>이름</td>
 				<td>직책</td>
 				<td>상사</td>
 				<td>입사일</td>
@@ -47,6 +48,7 @@
 				<tr>
 				<!-- 필드명을 가져오는 것이 아닌 getter명을 가져옴 -->
 					<td>${emp.empno}</td>
+					<td>${emp.ename}</td>
 					<td>${emp.job}</td>
 					<td>${emp.mgr}</td>
 					<td>${emp.hireDate}</td>

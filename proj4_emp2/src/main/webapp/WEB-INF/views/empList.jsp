@@ -27,8 +27,8 @@
 			<input type="submit" value="등록" id=insert>
 	</form>
 	<form>
-		<input type=text name=empno placeholder="사원번호를 입력해주세요">
-		<input type=text name=ename placeholder="이름을 입력해주세요">
+		<input type=text name=empno placeholder="사원번호를 입력해주세요" value="${param.empno}">
+		<input type=text name=ename placeholder="이름을 입력해주세요" value="${param.ename}">
 		<input type=submit value="검색">
 	</form>
 
@@ -50,7 +50,7 @@
 				<tr>
 				<!-- 필드명을 가져오는 것이 아닌 getter명을 가져옴 -->
 					<td>${emp.empno}</td>
-					<td><a href="read">${emp.ename}</a></td>
+					<td><a href="read?ename=${emp.ename}">${emp.ename}</a></td>
 					<td>${emp.job}</td>
 <%-- 					<td>${emp.mgr}</td> --%>
 <%-- 					<td>${emp.hireDate}</td> --%>

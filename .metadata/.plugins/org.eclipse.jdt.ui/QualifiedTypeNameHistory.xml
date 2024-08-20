@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="exam.AcademyArray"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -18,4 +17,7 @@
     <fullyQualifiedTypeName name="javax.naming.Context"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 </qualifiedTypeNameHistroy>
