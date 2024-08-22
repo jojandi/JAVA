@@ -23,7 +23,7 @@ public class EmpController extends HttpServlet {
 		System.out.println("empno : " + Pempno);
 		
 		String Pename = request.getParameter("ename");
-		System.out.println("empno : " + Pename);
+		System.out.println("ename : " + Pename);
 		
 		EmpService service = new EmpService();
 		List list = service.getEmp(Pempno, Pename);

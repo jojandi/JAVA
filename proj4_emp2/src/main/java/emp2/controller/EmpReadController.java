@@ -19,11 +19,11 @@ public class EmpReadController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("emp read  toGet 실행!!");
 		
-		String Pename = request.getParameter("ename");
-		System.out.println("empno : " + Pename);
+		String Pempno = request.getParameter("empno");
+		System.out.println("empno : " + Pempno);
 		
 		EmpService service = new EmpService();
-		List list = service.read(Pename);
+		List list = service.read(Pempno);
 		
 		request.setAttribute("list", list);
 		

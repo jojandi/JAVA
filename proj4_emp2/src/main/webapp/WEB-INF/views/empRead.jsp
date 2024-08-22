@@ -24,7 +24,7 @@
 
 <div>
 	<form action="delete" method="post">		
-		<input type="hidden" name="ename" value="${list[0].ename}">
+		<input type="hidden" name="empno" value="${list[0].empno}">
 		<a href="get"><input type=button value="목록으로"></a>
 		<a href="update?ename=${list[0].ename}"><input type=button value="수정"></a>
 		<input type=submit value="삭제">

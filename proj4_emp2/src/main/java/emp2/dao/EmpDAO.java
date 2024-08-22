@@ -13,8 +13,101 @@ import javax.sql.DataSource;
 import emp2.dto.EmpDTO;
 
 public class EmpDAO {
+	
+	public List selectPage(int start, int end) {
+		List list = new ArrayList();
+		
+		try {
+			Context ctx = new InitialContext();
+			DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+			// 커넥션 풀에서 접속 정보 가져오기
+			Connection con = dataFactory.getConnection();
+		  
+			// # SQL 준비
+			String query =  " select * ";
+            query += " from ( ";
+            query += " select rownum as rnum, empno, ename, job, deptno ";
+            query += " from ( ";
+            query += " select empno, ename, job, deptno ";
+            query += " from emp2 ";
+//            query += " order by ename ";
+            query += " ) ";
+            query += " ) ";
+            query += " where rnum >= ? and rnum <= ?";
+            PreparedStatement ps = new LoggableStatement(con, query);
+			ps.setInt(1, start);
+			ps.setInt(2, end);
+			
+			System.out.println(((LoggableStatement)ps).getQueryString()); // 실행문 출력
+			
+			ResultSet rs = ps.executeQuery();
 
-	public List selectEmp(String Pempno, String Pename) {
+			while (rs.next()){
+				EmpDTO dto = new EmpDTO();
+								
+				int empno = rs.getInt("empno"); // emp 컬럼의 값을 int로 형변환해서 가져옴
+				dto.setEmpno(empno);
+				
+				String ename = rs.getString("ename"); 
+				dto.setEname(ename);
+				
+				dto.setJob(rs.getString("job"));
+				
+//				java.sql.Date hireDate = rs.getDate("hireDate");
+//				dto.setHireDate(hireDate);
+				
+//				dto.setMgr(rs.getInt("mgr"));
+//				dto.setSal(rs.getInt("sal"));
+//				dto.setComm(rs.getInt("comm"));
+				dto.setDeptno(rs.getInt("deptno"));
+				dto.setRnum(rs.getInt("rnum"));
+				
+				list.add(dto);
+			}
+			ps.close();
+			con.close();
+			rs.close();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public int totalPage() {
+		int result = -1;
+		
+		try {
+			Context ctx = new InitialContext();
+			DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+			// 커넥션 풀에서 접속 정보 가져오기
+			Connection con = dataFactory.getConnection();
+		  
+			// # SQL 준비
+			String query =  " select count(*) cnt from emp2";
+
+            PreparedStatement ps = new LoggableStatement(con, query);
+			
+			System.out.println(((LoggableStatement)ps).getQueryString()); // 실행문 출력
+			
+			ResultSet rs = ps.executeQuery();
+
+			while(rs.next()) {				
+				result = rs.getInt("cnt");
+			}
+			
+			ps.close();
+			con.close();
+			rs.close();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+ 	public List selectEmp(String Pempno, String Pename) {
 		List list = new ArrayList();
 		
 		try {
@@ -76,7 +169,7 @@ public class EmpDAO {
 		return list;
 	}
 	
-	public List read(String Pename) {
+	public List read(String Pempno) {
 		List list = new ArrayList();
 		
 		try {
@@ -88,9 +181,9 @@ public class EmpDAO {
 			
 			// # SQL 준비
 			
-			String query = "select * from emp2 where ename = ?";
+			String query = "select * from emp2 where empno = ?";
 			PreparedStatement ps = con.prepareStatement(query); // 컴파일
-			ps.setString(1, Pename);
+			ps.setString(1, Pempno);
 				
 			ResultSet rs = ps.executeQuery();
 

@@ -49,8 +49,8 @@
 			<c:forEach var="emp" items="${list}">
 				<tr>
 				<!-- 필드명을 가져오는 것이 아닌 getter명을 가져옴 -->
-					<td>${emp.empno}</td>
-					<td><a href="read?ename=${emp.ename}">${emp.ename}</a></td>
+					<td><a href="read?empno=${emp.empno}">${emp.empno}</a></td>
+					<td>${emp.ename}</td>
 					<td>${emp.job}</td>
 <%-- 					<td>${emp.mgr}</td> --%>
 <%-- 					<td>${emp.hireDate}</td> --%>
