@@ -109,6 +109,18 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\worksapce\workspace_JAVA_home\project_2"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj5_file"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj4_emp2"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj3_todo"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj2_calc_MVC"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj1_hello"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap14"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap13"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap11"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap10"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap09"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap08"/>
 			<item value="C:\worksapce\workspace_JAVA_home\chap04"/>
 			<item value="C:\worksapce\workspace_JAVA_home\chap02"/>
 			<item value="C:\worksapce\workspace_JAVA_home\chap01"/>
@@ -117,17 +129,6 @@
 			<item value="C:\workspace\workspace_java\chap04"/>
 			<item value="C:\workspace\workspace_java\chap02"/>
 			<item value="C:\workspace\workspace_java\chap01"/>
-			<item value="C:\workspace\workspace_java\chap06"/>
-			<item value="C:\worksapce\workspace_JAVA_home\chap06"/>
-			<item value="C:\worksapce\JAVA-main\java_exam"/>
-			<item value="C:\worksapce\JAVA-main\chap06"/>
-			<item value="C:\worksapce\JAVA-main\chap05"/>
-			<item value="C:\worksapce\JAVA-main\chap04"/>
-			<item value="C:\worksapce\JAVA-main\chap02"/>
-			<item value="C:\worksapce\JAVA-main\chap01"/>
-			<item value="C:\workspace\workspace_java\test"/>
-			<item value="C:\workspace\workspace_java\java_exam"/>
-			<item value="C:\workspace\workspace_java\baekjoon"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
