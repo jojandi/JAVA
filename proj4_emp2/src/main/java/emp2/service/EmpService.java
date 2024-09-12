@@ -9,6 +9,15 @@ import emp2.dto.EmpDTO;
 
 public class EmpService {
 	
+	
+	// 전달받은 EmpDTO를 DAO로 보내고 DAO가 return한 EmpDTO를 반환
+	public EmpDTO loginCheck(EmpDTO dto) {
+		EmpDAO dao = new EmpDAO();
+		EmpDTO result = dao.selectLogin(dto);
+		
+		return result;
+	}
+	
 	public List getEmp(String Pempno, String Pename) {
 		return new EmpDAO().selectEmp(Pempno, Pename);
 	}

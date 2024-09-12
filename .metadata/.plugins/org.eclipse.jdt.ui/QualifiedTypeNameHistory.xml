@@ -14,10 +14,17 @@
     <fullyQualifiedTypeName name="org.zerock.w1.todo.dto.TodoDTO"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="javax.naming.Context"/>
-    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="admin.service.inven.InvenService"/>
+    <fullyQualifiedTypeName name="javax.naming.Context"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="admin.DTO.mem.loan.MemLoanDTO"/>
+    <fullyQualifiedTypeName name="user.service.best.BestService"/>
+    <fullyQualifiedTypeName name="user.dao.join.LoggableStatement"/>
+    <fullyQualifiedTypeName name="user.service.bookflix.BookflixService"/>
+    <fullyQualifiedTypeName name="user.service.my.MyService"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

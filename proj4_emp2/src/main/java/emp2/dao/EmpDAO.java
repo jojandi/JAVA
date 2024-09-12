@@ -14,6 +14,42 @@ import emp2.dto.EmpDTO;
 
 public class EmpDAO {
 	
+	public EmpDTO selectLogin(EmpDTO dto) {
+		EmpDTO result = null;
+		try {
+			Context ctx = new InitialContext();
+			DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+			// 커넥션 풀에서 접속 정보 가져오기
+			Connection con = dataFactory.getConnection();
+		  
+			// # SQL 준비
+			String query =  " select * from emp3 where ename = ? and empno = ?";
+            PreparedStatement ps = new LoggableStatement(con, query);
+			ps.setString(1, dto.getEname());
+			ps.setInt(2, dto.getEmpno());
+			
+			System.out.println(((LoggableStatement)ps).getQueryString()); // 실행문 출력
+			
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()){
+				result = new EmpDTO();
+				
+				result.setEname(rs.getString("ename"));
+				result.setEmpno(rs.getInt("empno"));
+				result.setSal(rs.getInt("sal"));
+			}
+			
+			ps.close();
+			con.close();
+			rs.close();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
 	public List selectPage(int start, int end) {
 		List list = new ArrayList();
 		

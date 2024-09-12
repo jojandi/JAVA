@@ -23,6 +23,19 @@
 <body>
 
 <div>
+
+	<!-- loginDTO가 비어있지 않다면 -->
+	<c:if test="${not empty loginDTO}">
+		<div>
+			${loginDTO.ename}님 환영합니다. 
+		</div>
+	</c:if>
+	<!-- loginDTO가 비어있지 있다면 -->
+	<c:if test="${empty loginDTO}">
+		<div>
+			<a href="login.jsp">로그인</a>
+		</div>
+	</c:if>
 	<form action="insert">
 			<input type="submit" value="등록" id=insert>
 	</form>

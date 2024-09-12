@@ -6,25 +6,27 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="setSpeed"/>
+		<item key="selection" value="out"/>
 		<list key="findhistory">
-			<item value="getSpeed"/>
-			<item value="getGas"/>
-			<item value="hart2"/>
-			<item value="hart1"/>
-			<item value="infomation"/>
-			<item value="charactor"/>
-			<item value="sv22"/>
-			<item value="defend1"/>
-			<item value="defend2"/>
-			<item value="c1.heal1"/>
-			<item value="heal2"/>
-			<item value="heal1"/>
-			<item value="attack2"/>
-			<item value="attack1"/>
-			<item value="함수"/>
+			<item value="out"/>
+			<item value="rel"/>
+			<item value="submit"/>
+			<item value="popup-close"/>
+			<item value="70"/>
+			<item value="page"/>
+			<item value="sc"/>
+			<item value="selectEmp"/>
+			<item value="bookall"/>
+			<item value="80%"/>
+			<item value="sysdate"/>
+			<item value="sys"/>
+			<item value="scroll"/>
+			<item value=".searchEnd .books "/>
+			<item value="/**"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="checkbox"/>
 			<item value="setSpeed"/>
 			<item value="setGas"/>
 			<item value="c2.hart"/>
@@ -38,13 +40,11 @@
 			<item value="c1.heal1"/>
 			<item value="c2.attack()"/>
 			<item value="c1.attack()"/>
-			<item value="메소드"/>
-			<item value="결제"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="86"/>
-		<item key="DIALOG_Y_ORIGIN" value="152"/>
+		<item key="DIALOG_X_ORIGIN" value="835"/>
+		<item key="DIALOG_Y_ORIGIN" value="160"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
