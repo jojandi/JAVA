@@ -109,23 +109,31 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
 			<item value="C:\workspace\workspace_java\project_2"/>
 			<item value="C:\workspace\workspace_java\project_2\jojandi_2"/>
+=======
+			<item value="C:\worksapce\workspace_JAVA_home\project_2"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj5_file"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj4_emp2"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj3_todo"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj2_calc_MVC"/>
+			<item value="C:\worksapce\workspace_JAVA_home\proj1_hello"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap14"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap13"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap11"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap10"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap09"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap08"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap04"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap02"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap01"/>
+			<item value="C:\worksapce\workspace_JAVA_home\chap07"/>
+>>>>>>> 6d50ba03acc92ac2e543f304288378eba28f573c
 			<item value="C:\workspace\workspace_java\chap05"/>
 			<item value="C:\workspace\workspace_java\chap04"/>
 			<item value="C:\workspace\workspace_java\chap02"/>
 			<item value="C:\workspace\workspace_java\chap01"/>
-			<item value="C:\workspace\workspace_java\chap06"/>
-			<item value="C:\worksapce\workspace_JAVA_home\chap06"/>
-			<item value="C:\worksapce\JAVA-main\java_exam"/>
-			<item value="C:\worksapce\JAVA-main\chap06"/>
-			<item value="C:\worksapce\JAVA-main\chap05"/>
-			<item value="C:\worksapce\JAVA-main\chap04"/>
-			<item value="C:\worksapce\JAVA-main\chap02"/>
-			<item value="C:\worksapce\JAVA-main\chap01"/>
-			<item value="C:\workspace\workspace_java\test"/>
-			<item value="C:\workspace\workspace_java\java_exam"/>
-			<item value="C:\workspace\workspace_java\baekjoon"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
@@ -141,10 +149,18 @@
 	</section>
 	<section name="NewWizardAction">
 	</section>
+<<<<<<< HEAD
 	<section name="CleanDialogSettings">
 		<item key="TOGGLE_SELECTED" value="false"/>
 		<item key="DIALOG_WIDTH" value="500"/>
 		<item key="DIALOG_HEIGHT" value="389"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+=======
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+>>>>>>> 6d50ba03acc92ac2e543f304288378eba28f573c
 	</section>
 </section>

@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=chap07/src&lt;food{Food.java[Food" modifiers="1" timestamp="1720595640001"/>
-    <typeInfo handle="=chap07/src&lt;sec02.exam01{P1.java[P1" modifiers="1" timestamp="1720747758803"/>
-    <typeInfo handle="=chap07/src&lt;sec02.exam01{Animal.java[Animal" modifiers="1" timestamp="1720751358141"/>
-    <typeInfo handle="=chap07/src&lt;car{Car.java[Car" modifiers="1" timestamp="1720664853691"/>
-    <typeInfo handle="=chap07/src&lt;cafe{Cafe.java[Cafe" modifiers="1" timestamp="1720680572093"/>
-    <typeInfo handle="=chap07/src&lt;cafeDT{Cafe.java[Cafe" modifiers="1" timestamp="1720764308883"/>
-    <typeInfo handle="=chap07/src&lt;sec02.exam05{Parent.java[Parent" modifiers="1" timestamp="1721006017841"/>
-    <typeInfo handle="=chap07/src&lt;sec03.exam02{Animal.java[Animal" modifiers="1025" timestamp="1721019976497"/>
-    <typeInfo handle="=chap07/src&lt;sec03.exam02{Dog2.java[Dog2" modifiers="1025" timestamp="1721014898207"/>
-    <typeInfo handle="=chap08/src&lt;sec01.exam01{RemoteControl.java[RemoteControl" modifiers="513" timestamp="1721090977308"/>
-    <typeInfo handle="=chap08/src&lt;sec01.exam01{Searchable.java[Searchable" modifiers="513" timestamp="1721027019641"/>
-    <typeInfo handle="=chap09/src&lt;chap09{MemberDTO.java[MemberDTO" modifiers="1" timestamp="1721113725769"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

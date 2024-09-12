@@ -22,8 +22,10 @@
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
   -->
-  <!-- APR library loader. Documentation at /docs/apr.html -->
-  <Listener SSLEngine="on" className="org.apache.catalina.core.AprLifecycleListener"/>
+  <!-- APR connector and OpenSSL support using Tomcat Native -->
+  <Listener className="org.apache.catalina.core.AprLifecycleListener"/>
+  <!-- OpenSSL support using FFM API from Java 22 -->
+  <!-- <Listener className="org.apache.catalina.core.OpenSSLLifecycleListener" /> -->
   <!-- Prevent memory leaks due to use of particular java/javax APIs-->
   <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
   <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
@@ -160,10 +162,14 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
+<<<<<<< HEAD:Servers/Tomcat v9.0 Server at localhost-config/server.xml
       
       
       
       <Context docBase="jojandi_2" path="/jojandi_2" reloadable="true" source="org.eclipse.jst.jee.server:jojandi_2"/><Context docBase="user_page" path="/user_page" reloadable="true" source="org.eclipse.jst.jee.server:user_page"/><Context docBase="mmes_page" path="/mmes_page" reloadable="true" source="org.eclipse.jst.jee.server:mmes_page"/><Context docBase="admin_page" path="/admin_page" reloadable="true" source="org.eclipse.jst.jee.server:admin_page"/></Host>
+=======
+      <Context docBase="jojandi_2" path="/jojandi_2" reloadable="true" source="org.eclipse.jst.jee.server:jojandi_2"/><Context docBase="user_page" path="/user_page" reloadable="true" source="org.eclipse.jst.jee.server:user_page"/><Context docBase="admin_page" path="/admin_page" reloadable="true" source="org.eclipse.jst.jee.server:admin_page"/></Host>
+>>>>>>> 6d50ba03acc92ac2e543f304288378eba28f573c:Servers/Tomcat v9.0 Server at localhost (2)-config/server.xml
     </Engine>
   </Service>
 </Server>
