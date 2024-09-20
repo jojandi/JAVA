@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="out"/>
+		<item key="selection" value="selectEnameEmp"/>
 		<list key="findhistory">
+			<item value="ㅁ"/>
+			<item value="selectEnameEmp"/>
 			<item value="out"/>
 			<item value="rel"/>
 			<item value="submit"/>
@@ -21,8 +23,6 @@
 			<item value="sysdate"/>
 			<item value="sys"/>
 			<item value="scroll"/>
-			<item value=".searchEnd .books "/>
-			<item value="/**"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

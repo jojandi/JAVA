@@ -19,7 +19,6 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="admin.service.inven.InvenService"/>
     <fullyQualifiedTypeName name="javax.naming.Context"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="admin.DTO.mem.loan.MemLoanDTO"/>
     <fullyQualifiedTypeName name="user.service.best.BestService"/>
@@ -27,4 +26,5 @@
     <fullyQualifiedTypeName name="user.service.bookflix.BookflixService"/>
     <fullyQualifiedTypeName name="user.service.my.MyService"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
 </qualifiedTypeNameHistroy>
