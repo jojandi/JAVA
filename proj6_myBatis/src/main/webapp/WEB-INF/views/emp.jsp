@@ -60,15 +60,15 @@
 					<thead>
 						<tr>
 							<th></th>
-							<c:if test="${orderType == '' or orderType == null}">
-								<th id="empno">empno</th>
-							</c:if>
-							<c:if test="${orderType == 'desc'}">
-								<th id="empno">empno↑</th>
-							</c:if>
-							<c:if test="${orderType == 'asc'}">
-								<th id="empno">empno↓</th>
-							</c:if>
+							<th id="empno">
+								empno
+								<c:if test="${orderType == 'desc'}">
+									↓
+								</c:if>
+								<c:if test="${orderType == 'asc'}">
+									↑
+								</c:if>
+							</th>
 							<th>ename</th>
 							<th>job</th>
 							<th>sal</th>

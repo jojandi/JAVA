@@ -82,17 +82,35 @@
 			</if>
 		</where>
 		
-		<choose>
-			<when test="orderType == '' and orderType == null">
+		<if test="orderType != '' and orderType != null">
+			
+				<!-- 방법 1
+					<if test="orderType == 'desc'">
+						ORDER BY empno DESC
+					</if>
+					<if test="orderType == 'asc'">
+						ORDER BY empno ASC
+					</if> 
+				-->
 				
-			</when>
-			<when test="orderType == 'desc'">
-				ORDER BY empno DESC
-			</when>
-			<when test="orderType == 'asc'">
-				ORDER BY empno ASC
-			</when>
-		</choose>
+				<!-- 방법 2
+					ORDER BY empno
+					<if test="orderType == 'desc'">
+						DESC
+					</if>
+					<if test="orderType == 'asc'">
+						ASC
+					</if> 
+				-->
+				
+				<!-- 방법 3
+					#{} : 문자인 경우 ''을 붙여주고 숫자인 경우 그냥 사용 
+						( abc > 'abc', 123 > 123 )
+					${} : 무조건 그냥 사용,  보안상 문제 생길 위험이 있음
+						( abc > abc, 123 > 123 )
+				 -->
+				ORDER BY empno ${orderType}
+		</if>
 	</select>
 
 </mapper>
