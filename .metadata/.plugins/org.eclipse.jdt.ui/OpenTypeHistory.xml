@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=proj7_spring/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.or.human.member.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1727224791774"/>
+    <typeInfo handle="=proj8_Spring_MyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.or.human.emp.dao{EmpDAO.java[EmpDAO" modifiers="513" timestamp="1727319648848"/>
+    <typeInfo handle="=proj8_Spring_MyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.or.human.emp.service{EmpService.java[EmpService" modifiers="513" timestamp="1727319712930"/>
 </typeInfoHistroy>
