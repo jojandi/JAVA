@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- template : 기본 틀 -->
+	<definition name="baseLayout" template="/WEB-INF/views/common/layout.jsp">
+		<!-- name = jsp에서 쓴 name, value = 해당 name에 넣을 파일 경로 -->
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+		<put-attribute name="side" value="/WEB-INF/views/common/side.jsp"/>
+		<put-attribute name="content" value=""/>
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+	</definition>
+	
+	<!-- baseLayout를 상속하여 content 영역은 오버라이드 -->
+	<definition name="main" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/main1.jsp"/>
+	</definition>
+	
+	<definition name="main2" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/main2.jsp"/>
+	</definition>
+	
+	<!-- *에 오는 거에 따라 jsp가 정해짐 -->
+	<definition name="*.tiles" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/{1}.jsp"/>
+	</definition>
+	
+	<definition name="*/*.tiles" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
+	</definition>
+	
+	<definition name="loginLayout" template="/WEB-INF/views/common/layout2.jsp">
+		<!-- name = jsp에서 쓴 name, value = 해당 name에 넣을 파일 경로 -->
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+		<put-attribute name="title" value=""/>
+		<put-attribute name="content" value=""/>
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+	</definition>
+
+	<definition name="login" extends="loginLayout">
+		<!-- 글씨 자체가 나옴 -->
+		<put-attribute name="title" value="LOGIN"/>
+		<put-attribute name="content" value="/WEB-INF/views/login.jsp"/>
+	</definition>
+	
+</tiles-definitions>
