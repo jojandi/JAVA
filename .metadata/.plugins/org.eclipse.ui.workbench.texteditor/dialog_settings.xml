@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="log4j"/>
+		<item key="selection" value="junit"/>
 		<list key="findhistory">
+			<item value="junit"/>
 			<item value="log4j"/>
 			<item value="ㅁ"/>
 			<item value="selectEnameEmp"/>
@@ -22,7 +23,6 @@
 			<item value="bookall"/>
 			<item value="80%"/>
 			<item value="sysdate"/>
-			<item value="sys"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
