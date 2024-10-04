@@ -28,7 +28,7 @@
 
 <main>
 	<div id="aDiv">
-		<a href="join?cmd=join">
+		<a href="join">
 			<input type="button" value="회원가입">
 		</a>
 	</div>
@@ -142,7 +142,7 @@
 							<input type="checkbox" name="check" value="\${empList[i].empno}">
 						</td>
 						<td>\${empList[i].empno}</td>
-						<td><a href="info?cmd=edit&empno=\${empList[i].empno}">\${empList[i].ename}</a></td>
+						<td><a href="info?empno=\${empList[i].empno}">\${empList[i].ename}</a></td>
 						<td>\${empList[i].job}</td>
 						<td>\${empList[i].sal}</td>
 						<td>\${yyyy}-\${MM}-\${dd}</td>

@@ -11,8 +11,10 @@
 <style>
 	table{ width: 400px; border: 1px #a39485 solid; font-size: .9em; border-collapse: collapse; margin: 10px 0;}
 	td { border-bottom: 1px solid #ccc; background: #fff; text-align: center; }
-	form{ width: 400px; }
+	#form{ width: 400px; }
 	table input { width: 90%; }
+	a:link{ color: inherit; text-decoration: none; }
+    a:visited{ color: inherit; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -28,15 +30,7 @@
 		<nav>emp &gt; 회원 수정</nav>
 	</c:if>
 </header>
-	<c:if test='${cmd == "info"}'>
-		<form method="get" action="edit">
-	</c:if>
-	<c:if test='${cmd == "join"}'>
-		<form method="post" action="join">
-	</c:if>
-	<c:if test='${cmd == "edit"}'>
-		<form method="post" action="edit">
-	</c:if>
+	<div id="form">
 		<table border="1">
 			<tr>
 				<td>empno</td>
@@ -45,9 +39,10 @@
 						${dto.empno}
 					</c:if>
 					<c:if test='${cmd == "join"}'>
-						<input type="text" name="empno">
+						<input type="text" id="empno" name="empno">
 					</c:if>
 					<c:if test='${cmd == "edit"}'>
+						<input type="hidden" id="empno" value="${dto.empno}" name="empno">
 						${dto.empno}
 					</c:if>
 				</td>
@@ -59,10 +54,10 @@
 						${dto.ename}
 					</c:if>
 					<c:if test='${cmd == "join"}'>
-						<input type="text" name="ename">
+						<input type="text" id="ename" name="ename">
 					</c:if>
 					<c:if test='${cmd == "edit"}'>
-						<input type="text" name="ename" value="${dto.ename}">
+						<input type="text" name="ename" id="ename" value="${dto.ename}">
 					</c:if>
 				</td>
 			</tr>
@@ -73,10 +68,10 @@
 						${dto.hireDate}
 					</c:if>
 					<c:if test='${cmd == "join"}'>
-						<input type="date" name="hireDate">
+						<input type="date" id="hireDate" name="hireDate">
 					</c:if>
 					<c:if test='${cmd == "edit"}'>
-						<input type="date" name="hireDate" value="${dto.hireDate}">
+						<input type="date" name="hireDate" id="hireDate" value="${dto.hireDate}">
 					</c:if>
 				</td>
 			</tr>
@@ -84,21 +79,100 @@
 		</table>
 		<div style="text-align: center;">
 			<c:if test='${cmd == "info"}'>
-				<input type="hidden" name="empno" value="${dto.empno}">
-				<input type="hidden" name="cmd" value="edit">
-				<input type="submit" value="수정하기">
+				<a href="edit?empno=${dto.empno}">
+					<input type="button" id="infoBtn" value="수정하기">
+				</a>
 			</c:if>
 			<c:if test='${cmd == "join"}'>
-				<input type="submit" value="가입하기">
+				<input type="button" id="joinBtn" value="가입하기">
 			</c:if>
 			<c:if test='${cmd == "edit"}'>
-				<input type="hidden" name="empno" value="${dto.empno}">
-				<input type="hidden" name="cmd" value="edit">
-				<input type="submit" value="수정하기">
+				<input type="button" id="editBtn" value="수정하기">
 			</c:if>
-			<a href="member"><input type="button" value="목록으로"></a>
+			<a href="emp"><input type="button" value="목록으로"></a>
 		</div>
-	</form>
+	</div>
+	
+	<script>
+	
+		// ajax 실행 메소드 
+		function ajax(url, param, cb, method){	// cb : callback 함수
+		
+			if(!method) method = "get"; // method 기본값 설정
+			
+			const xhr = new XMLHttpRequest();
+		
+			xhr.open(method,url);
+			xhr.setRequestHeader("Content-Type","application/json");		
+			const strData = JSON.stringify(param); 
+			console.log("strData : " + strData);
+			xhr.send(strData); // 최종 전송
+			
+			// typeof : 변수의 타입을 문자로 알려줌
+			if(typeof cb == "function"){
+				xhr.onload = function(){
+					cb(xhr.responseText); // 전달인자 -> ajax에서 받아온 것
+				}
+			}
+		}
+		
+		if(document.querySelector("#joinBtn")){
+			// 회원가입
+			document.querySelector("#joinBtn").addEventListener("click", function(e){
+				join();
+			})
+		} else if(document.querySelector("#editBtn")){
+			// 회원수정
+			document.querySelector("#editBtn").addEventListener("click", function(e){
+				edit();
+			})
+		}
+		
+		function join(){
+			const empno = document.querySelector("#empno").value;
+			const ename = document.querySelector("#ename").value;
+			const hireDate = document.querySelector("#hireDate").value;
+			
+			const data = {
+				"empno" : empno,
+				"ename" : ename,
+				"hireDate" : hireDate
+			}
+			
+			ajax("joinEmp", data, function(result){
+				if(result > 0){
+					console.log(result);
+					// ajax로는 페이지 이동이 불가능하기 때문에 script로 페이지 이동
+					location.href="emp";
+				} else{
+					alert("회원가입 실패");
+				}
+			}, "post")
+		}
+		
+		function edit(){
+			const empno = document.querySelector("#empno").value;
+			const ename = document.querySelector("#ename").value;
+			const hireDate = document.querySelector("#hireDate").value;
+			
+			const data = {
+				"empno" : empno,
+				"ename" : ename,
+				"hireDate" : hireDate
+			}
+			
+			ajax("editEmp", data, function(result){
+				if(result > 0){
+					console.log(result);
+					// ajax로는 페이지 이동이 불가능하기 때문에 script로 페이지 이동
+					location.href="emp";
+				} else{
+					alert("회원수정 실패");
+				}
+			}, "put")
+		}
+	
+	</script>
 
 </body>
 </html>
