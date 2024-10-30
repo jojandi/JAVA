@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.zerock.w1.todo.dto.TodoDTO"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
@@ -26,9 +25,24 @@
     <fullyQualifiedTypeName name="user.service.bookflix.BookflixService"/>
     <fullyQualifiedTypeName name="user.service.my.MyService"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartHttpServletRequest"/>
+    <fullyQualifiedTypeName name="project3.gamja.jojandi.service.user.my.UseService"/>
+    <fullyQualifiedTypeName name="project3.gamja.user.dto.my.CartDTO"/>
+    <fullyQualifiedTypeName name="project3.gamja.user.service.my.CartService"/>
+    <fullyQualifiedTypeName name="project3.gamja.user.service.ApplyService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="project3.gamja.admin.service.NotiService"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.dao.mes.BookflixDAO"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.dao.mes.MainDAO"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.service.mes.MainService"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.service.admin.MainService"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.dao.admin.MainDAO"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.dto.admin.NotiDTO"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.dto.admin.RequestDTO"/>
+    <fullyQualifiedTypeName name="project3.talking.gamja.dto.admin.ApplyDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
